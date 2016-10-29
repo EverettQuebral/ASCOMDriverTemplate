@@ -183,7 +183,7 @@ namespace ASCOM.TEMPLATEDEVICENAME
             // DO NOT have both these sections!  One or the other
         }
 
-        public string CommandString(string command, bool raw)
+        public string CommandString(string command, bool raw = false)
         {
             CheckConnected("CommandString");
             // it's a good idea to put all the low level communication with the device here,
