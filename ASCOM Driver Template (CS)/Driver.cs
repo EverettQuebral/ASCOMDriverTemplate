@@ -163,7 +163,7 @@ namespace ASCOM.TEMPLATEDEVICENAME
             throw new ASCOM.ActionNotImplementedException("Action " + actionName + " is not implemented by this driver");
         }
 
-        public void CommandBlind(string command, bool raw)
+        public void CommandBlind(string command, bool raw = false)
         {
             CheckConnected("CommandBlind");
             // Call CommandString and return as soon as it finishes
@@ -173,7 +173,7 @@ namespace ASCOM.TEMPLATEDEVICENAME
             // DO NOT have both these sections!  One or the other
         }
 
-        public bool CommandBool(string command, bool raw)
+        public bool CommandBool(string command, bool raw = false)
         {
             CheckConnected("CommandBool");
             string ret = CommandString(command, raw);
